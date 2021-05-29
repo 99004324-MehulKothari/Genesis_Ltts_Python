@@ -7,6 +7,7 @@ from large_single import compute_large_single
 from words import compute_words
 from hex import compute_hex
 from accu import compute_accu
+from large_shuffle import compute_large_shuffle
 
 
 def test_time():
@@ -45,3 +46,7 @@ def test_acu():
     assert compute_accu("abcd")=="A-Bb-Ccc-Dddd"
     assert compute_accu("ksdlf")=="K-Ss-Ddd-Llll-Fffff"
     
+
+def test_large_shuffle():
+    assert compute_large_shuffle(41926)==96421
+    assert compute_large_shuffle(182959)==998521
